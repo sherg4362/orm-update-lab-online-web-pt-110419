@@ -57,6 +57,10 @@ class Student
     student
   end
   
+  def new_from_db
+    
+  end
+  
   def self.find_by_name(name)
     sql = "SELECT * FROM students WHERE name = ?"
       
