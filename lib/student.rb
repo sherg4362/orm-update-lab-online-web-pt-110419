@@ -51,7 +51,8 @@ class Student
       "SELECT * FROM students WHERE name = ?"
       SQL
       
-      DB[:conn].execute(sql, self.name)
+      result = DB[:conn].execute(sql, self.name)[0]
+      Student.new(result)
   end
   
   def update
